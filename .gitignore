@@ -1,0 +1,8 @@
+# Dependencias
+/node_modules/
+
+# Configuraciones de desarrollo
+.editorconfig
+
+# Entorno
+.env

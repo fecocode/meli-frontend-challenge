@@ -1,6 +1,6 @@
 import express from "express";
 import compression from "compression";
-import index from "./routes/index";
+import index from "./ssr/routes/index";
 import path from "path";
 
 // Instacia servidor

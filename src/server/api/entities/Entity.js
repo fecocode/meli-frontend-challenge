@@ -27,15 +27,6 @@ export class Entity {
     }
   }
 
-  get resource(){
-    return this._resource;
-  }
-  set resource(resource){
-    if(resource){
-      this._resource = resource;
-    }
-  }
-
   get config(){
     return this._config;
   }
@@ -46,30 +37,50 @@ export class Entity {
   }
 
   /**
-   * @param {object} filter
-   * @param {object} config
+   * @param {object} config={}
    * @return {object}
    * 
    * Busca items en la API o BD que especifiquemos
-   * de acuerdo a los filtros que le pasemos
    */
 
-  /*async find(apiMethod=null,filter=null, config={}){
+  async find(config={}){
+    config = {...this._config, ...config};
+    const uri = this._uriConstructor(null,filter);
 
-  }*/
+    return this._http.get(uri, config);
+  }
 
   /**
+   * 
    * @param {string} id
-   * @param {object} filter
-   * @param {object} config
+   * @param {object} config={}
    * @return {object}
    * 
    * Busca toda la información del item cuya id
    * coincide con lo que pasamos como parámetro
    */
 
-  /*async findById(apiMethod=null,filter=null, config={}){
+  async findById(id, config={}){
+    config = {...this._config, ...config};
+    const uri = this._uriConstructor(id);
     
-  }*/
+    return this._http.get(uri,config);
+  }
+
+  /**
+   * @param {string} id=''
+   * @return {string}
+   * 
+   * retorna la URL definitiva para la consulta
+   */
+
+  _uriConstructor(endpoint='') {
+    let uri = `${this._baseUrl}`;
+    
+    if(endpoint) {
+      uri += `/${endpoint}`;
+    }
+    return uri;
+  }
 
 }

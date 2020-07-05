@@ -26,7 +26,5 @@ app.use("/", index);
 const port = process.env.PORT || 3000;
 
 app.listen(port, function listenHandler() {
-    console.info(`Running on ${port}`)
-    console.log(entities)
-    console.log(routes)
+    console.info(`Running on ${port}`);
 });

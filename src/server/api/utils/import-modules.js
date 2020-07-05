@@ -1,4 +1,4 @@
-const http = 'http lalala';
+import http from '../plugins/http-client'
 
 /**
  * @param {object} modules

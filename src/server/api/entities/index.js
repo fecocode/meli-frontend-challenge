@@ -7,10 +7,10 @@ import { createEntities } from '../utils/import-modules'
  */
 
 // Entidades
-import Product from './Product';
+import Item from './Item';
 // import NewEntitie from './NewEntitie'; 
 
 export default createEntities({
-  Product
+  Item
   // NewEntitie
 });

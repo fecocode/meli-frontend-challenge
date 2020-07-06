@@ -45,7 +45,7 @@ export class Entity {
 
   async find(config={}){
     config = {...this._config, ...config};
-    const uri = this._uriConstructor(null,filter);
+    const uri = this._uriConstructor(null);
 
     return this._http.get(uri, config);
   }

@@ -1,4 +1,4 @@
-import http from '../plugins/http-client'
+import http from '@plugins/http-client'
 
 /**
  * @param {object} modules

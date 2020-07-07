@@ -1,7 +1,7 @@
 import express from 'express';
 
 import controllers from '../controllers'
-import { getEnv } from '../utils/env'
+import { getEnv } from '@utils/env'
 
 const {
   itemController:{searchItems,getItemById}

@@ -15,7 +15,7 @@ const { routes : ssrRoutes } = ssr;
 const app = express();
 
 // Configura el motor de vistas SSR
-app.set("views", path.join(__dirname,"views"));
+app.set("views", path.join(__dirname,"ssr/views"));
 app.set("view engine", "ejs");
 
 

@@ -1,9 +1,9 @@
 import entities from '../entities';
 
-import { createUrl } from '../utils/uri';
-import { getEnv } from '../utils/env';
+import { createUrl } from '@utils/uri';
+import { getEnv } from '@utils/env';
 
-import http_client from '../plugins/http-client';
+import http_client from '@plugins/http-client';
 
 const {$Item} = entities;
 

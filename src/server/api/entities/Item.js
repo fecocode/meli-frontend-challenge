@@ -1,5 +1,5 @@
 import { Entity } from './Entity';
-import { createUrl, getBaseUrl } from '../utils/uri';
+import { createUrl, getBaseUrl } from '@utils/uri';
 
 const url = createUrl('items');
 export default class Product extends Entity {

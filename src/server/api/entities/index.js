@@ -1,4 +1,4 @@
-import { createEntities } from '../utils/import-modules'
+import { createEntities } from '@utils/import-modules'
 
 /**
  * Al momento que se crea una entidad,

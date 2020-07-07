@@ -1,11 +1,15 @@
 import express from "express";
 import compression from "compression";
-import index from "./ssr/routes/index";
 import path from "path";
-import api from './api';
 
-// Extrae las entidades y rutas de la api
-const {entities, routes} = api;
+import api from './api';
+import ssr from './ssr';
+
+// Extrae las rutas de la api
+const { routes : apiRoutes } = api;
+// Extrae las rutas de SSR
+const { routes : ssrRoutes } = ssr;
+
 
 // Instacia servidor
 const app = express();
@@ -21,7 +25,8 @@ console.log(__dirname);
 app.use(express.static(__dirname + "/public"));
 
 // Rutas
-app.use("/", index);
+app.use("/", ssrRoutes);
+app.use("/api", apiRoutes);
 
 const port = process.env.PORT || 3000;
 

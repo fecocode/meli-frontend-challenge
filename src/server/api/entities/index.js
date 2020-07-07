@@ -11,6 +11,6 @@ import Item from './Item';
 // import NewEntitie from './NewEntitie'; 
 
 export default createEntities({
-  Item
+  Item,
   // NewEntitie
 });

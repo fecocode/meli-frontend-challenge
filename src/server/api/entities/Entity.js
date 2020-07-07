@@ -63,7 +63,6 @@ export class Entity {
   async findById(id, config={}){
     config = {...this._config, ...config};
     const uri = this._uriConstructor(id);
-    
     return this._http.get(uri,config);
   }
 
@@ -82,5 +81,6 @@ export class Entity {
     }
     return uri;
   }
+
 
 }
